@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа Халова Павла</title>
+</head>
+<body>
+<h1>Работа Халова Павла</h1>
+<ul>
+    <li>
+        <a href="http://kubsu.ru/index.php"> КубГУ</a>
+    </li>
+
+    <li>
+        <a href="https://kubsu.ru/index.php"> Официальный сайт КубГУ</a>
+    </li>
+
+    <li>
+        <a href="http://kubsu.ru/">
+            <img alt="Весёлая картинка" src="funnyPic.jpg" id="#funnypicture"></a>
+    </li>
+
+    <li>
+        <a href="Catalog/second-page.html"> Сокращ. ссылка на внутр. страницу сайта</a>
+    </li>
+
+    <li>
+        <a href="./MainPage.html"> Сокращ. ссылка на главную страницу сайта </a>
+    </li>
+
+    <li>
+        <a href="#formList"> Ссылка на фрагмент текущей страницы (на форму для заполнения) </a>
+    </li>
+
+    <li>
+        <a href="https://www.kubsu.ru/ru/taxonomy/term/49?page=1&perpage=10&category=post"> Ссылка с тремя параметрами </a>
+    </li>
+
+    <li>
+        <a href="https://www.kubsu.ru/ru/taxonomy/term/49?id=#zone-footer-wrapper"> Ссылка с параметром: id </a>
+    </li>
+
+    <li>
+        <a href="./MainPage.html"> Относительная сслыка на главную страницу в главном пакете</a>
+    </li>
+
+    <li>
+        <a href="./Catalog/second-page.html"> Относительная ссылка на внутреннюю страницу в каталоге</a>
+    </li>
+
+    <li>
+        <a href="./Catalog/Catalog2/third-page.html"> Относительная ссылка на внутреннюю страницу в каталоге2, где относительная ссылка на страницу в каталоге </a>
+    </li>
+
+    <li>
+        <p>
+            Пример использования <a href="http://kubsu.ru/index.php"> ссылки</a> посреди текста
+        </p>
+    </li>
+
+    <li>
+        <a href="https://swiftbook.org/courses/415/show_promo/#"> Ссылка на фрагмет сайта с it курсами swiftbook</a>
+    </li>
+
+    <map name="kartinka">
+        <area shape="recet" coords="70,70,700,380" href="https://kubsu.ru" alt="Сайт кубгу, прямоугольник">
+        <area shape="circle" coords="360, 750, 250" href="https://kubsu.ru/index.php" alt="Сайт кубгу, круг">
+        <img src="kartinka.jpg"  usemap="#kartinka" alt="Кратинка">
+    </map>
+
+    <li>
+        <a href=""> Пустая ссылка</a>
+    </li>
+
+    <li>
+        <a> Сыллка без href</a>
+    </li>
+
+    <li>
+        <a href="http://kubsu.ru/" rel="nofollow"> Запрещённая для поисковиков ссылка </a>
+    </li>
+
+    <li>
+        <a href="http://kubsu.ru" rel="noindex"> Запрещённая ссылка для индексации </a>
+    </li>
+    <li>
+        <ol>
+            <li>
+                <a href="http://kubsu.ru" tite="Вот"> Сайт КубГУ</a>
+            </li>
+            <li>
+                <a href="http://kubsu.ru" tite="Сайт"> Сайт КубГУ</a>
+            </li>
+            <li>
+                <a href="http://kubsu.ru" tite="КубГУ"> Сайт КубГУ</a>
+            </li>
+        </ol>
+    </li>
+
+    <li>
+        Тут должна быть ссылка на файл на сервере FTP с авторизацией
+    </li>
+</ul>
+
+<h4> Форма для заполнения: </h4>
+<form method="POST" action="/" id="formList">
+    <label> ФИО </label>
+    <br>
+    <input type="text" name="fieldNameSurname">
+    <br>
+    <label> Номер телефона </label>
+    <br>
+    <input type="tel" name="fieldPhoneNumber">
+    <br>
+    <label> Ваш Email адрес </label>
+    <br>
+    <input type="email" name="fieldEmail">
+    <br>
+    <label> Дата рождения </label>
+    <br>
+    <input type="date" name="fieldDateBirthday">
+    <br>
+    <label> Ваш пол: </label>
+    <label> <input type="radio" name="radio-sex" checked="checked" value="Мужской"> Мужской </label>
+    <label> <input type="radio" name="radio-sex" value="Женский"> Женский </label>
+    <br>
+    <label> Любимый язык программирования: </label>
+    <br>
+    <select multiple="multiple" name="fieldFavoriteProgrammingLanguage">
+        <option value="Java">Java</option>
+        <option value="PHP">PHP</option>
+        <option value="C++">C++</option>
+        <option value="Python">Python</option>
+        <option value="Ruby">Ruby</option>
+        <option value="C#">C#</option>
+        <option value="C">C</option>
+        <option value="1C">1C</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Pascal">Pascal</option>
+        <option value="Haskel">Haskel</option>
+        <option value="Prolog">Prolog</option>
+        <option value="Scala">Scala</option>
+        <option value="Clojure">Clojure</option>
+    </select>
+    <br>
+    <label> Ваша биография </label>
+    <br>
+    <textarea name="fieldBiography"> Расскажите в вашей Биографии </textarea>
+    <br>
+    <input type="checkbox" name="checkboxAgree"> С контрактом ознакомлен(а)
+    <br>
+    <input type="submit" value="Отправить">
+</form>
+</body>
+</html>
