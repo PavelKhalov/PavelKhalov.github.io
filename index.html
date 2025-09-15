@@ -102,24 +102,24 @@
         <a href="ftp://username:password@ftp.example.com/path/to/file.txt">Скачать файл</a>
     </li>
 </ul>
-    
+
 <h4> Форма для заполнения: </h4>
 <form method="POST" action="/" id="formList">
     <label> ФИО </label>
     <br>
-    <input type="text" name="fieldNameSurname">
+    <input type="text" name="fieldNameSurname" placeholder="Иванов Иван Иванович" required>
     <br>
     <label> Номер телефона </label>
     <br>
-    <input type="tel" name="fieldPhoneNumber">
+    <input type="tel" name="fieldPhoneNumber" placeholder="89992223432" required>
     <br>
     <label> Ваш Email адрес </label>
     <br>
-    <input type="email" name="fieldEmail">
+    <input type="email" name="fieldEmail" placeholder="hfhf@gmial.com" required>
     <br>
     <label> Дата рождения </label>
     <br>
-    <input type="date" name="fieldDateBirthday">
+    <input type="date" name="fieldDateBirthday" required>
     <br>
     <label> Ваш пол: </label>
     <label> <input type="radio" name="radio-sex" checked="checked" value="Мужской"> Мужской </label>
@@ -146,7 +146,7 @@
     <br>
     <label> Ваша биография </label>
     <br>
-    <textarea name="fieldBiography"> Расскажите в вашей Биографии </textarea>
+    <textarea name="fieldBiography" required> Расскажите в вашей Биографии </textarea>
     <br>
     <input type="checkbox" name="checkboxAgree"> С контрактом ознакомлен(а)
     <br>
@@ -155,3 +155,4 @@
 </body>
 
 </html>
+
