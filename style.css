@@ -20,6 +20,11 @@ main{
     text-align: center;
 }
 
+.table_main_div table{
+    margin: auto;
+    wigth: 100%;
+}
+
 footer{
     width: 100%;
     background-color: rgb(27, 28, 29);
