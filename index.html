@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Работа Халова Павла</title>
 </head>
+
 <body>
-     <header>
-        <div class="header_content">
-            <a href="#"><img src="logo.png" alt="logo.png" class="logo"></a>
-            <nav class="nav_header"><a href="#">Главная</a><a href="#link_list_title">Ссылки</a><a href="#table_main_title">Таблица</a><a href="#form_main_title">Форма</a></nav>
-            <h1 class="text_header_logo"><a href="#">САЙТ.РУ</a></h1>
-        </div>
-    </header>
-<h1>Работа Халова Павла</h1>
+<header>
+    <div class="header_content">
+        <a href="#"><img src="logo.png" alt="logo.png" class="logo"></a>
+        <nav class="nav_header"><a href="#">Главная</a><a href="#link_list_title">Ссылки</a><a href="#table_main_title">Таблица</a><a href="#form_main_title">Форма</a></nav>
+        <h1 class="text_header_logo"><a href="#">Сайт Халова Павла</a></h1>
+    </div>
+</header>
 
 <main>
     <p id="link_list_title"></p>
@@ -31,7 +31,7 @@
 
             <li>
                 <a href="http://kubsu.ru/">
-                <img alt="Весёлая картинка" src="funnyPic.jpg" id="#funnypicture"></a>
+                    <img alt="Весёлая картинка" src="funnyPic.jpg" id="#funnypicture"></a>
             </li>
 
             <li>
@@ -89,7 +89,7 @@
             <li>
                 <a> Сыллка без href</a>
             </li>
-            
+
             <li>
                 <a href="http://kubsu.ru/" rel="nofollow"> Запрещённая для поисковиков ссылка </a>
             </li>
@@ -98,11 +98,11 @@
                 <a href="http://kubsu.ru" rel="noindex"> Запрещённая ссылка для индексации </a>
             </li>
             <li>
-                
+
                 <ol>
                     <li>
                         <a href="http://kubsu.ru" tite="Вот"> Сайт КубГУ</a>
-                        </li>
+                    </li>
                     <li>
                         <a href="http://kubsu.ru" tite="Сайт"> Сайт КубГУ</a>
                     </li>
@@ -118,136 +118,123 @@
         </ul>
     </div>
     <p id="table_main_title"></p>
-        <p class="table_main_title"> Таблица </p>
-                <br>
+    <p class="table_main_title" style="color: white">Таблица</p>
+    <div class="table_main_div">
+        <table>
+            <tr>
+                <th colspan="4">Тип</th>
+                <th>Данные</th>
+                <th>Дата</th>
+                <th>Статус</th>
+                <th>Примечания</th>
+            </tr>
 
-                    <div class="table_main_div">
-                <table>
-                    <tr>
-                        <th colspan="4">Тип</th>
-                        <th>Данные</th>
-                        <th>Дата</th>
-                        <th>Статус</th>
-                        <th>Примечания</th>
-                    </tr>
+            <tr>
+                <td colspan="4">Физ. Лицо</td>
+                <td>Мельникова Ксения</td>
+                <td>2025-09-20</td>
+                <td>Завершен</td>
+                <td>Нет примечаний</td>
+            </tr>
 
-                    <tr>
-                        <td colspan="4">Физ. Лицо</td>
-                        <td>Мельникова Ксения</td>
-                        <td>2025-09-20</td>
-                        <td>Завершен</td>
-                        <td>Нет примечаний</td>
-                    </tr>
-            
-                    <tr>
-                        <td colspan="4" >Физ. Лицо</td>
-                        <td>Иванов Иван</td>
-                        <td>2025-09-20</td>
-                        <td>Активен</td>
-                        <td>Нет примечаний</td>
-                    </tr>
-            
-                    <tr>
-                        <td colspan="4">Юр. Лицо</td>
-                        <td>"ООО «Альфа Строй»"</td>
-                        <td>2025-09-20</td>
-                        <td>В ожидании</td>
-                        <td>Важный клиент</td>
-                    </tr>
-            
-                    <tr>
-                        <td colspan="4">Юр. Лицо</td>
-                        <td>Петров Петр</td>
-                        <td>2025-09-18</td>
-                        <td>В процессе</td>
-                        <td>Требуется уточнение</td>
-                    </tr>
+            <tr>
+                <td colspan="4" >Физ. Лицо</td>
+                <td>Иванов Иван</td>
+                <td>2025-09-20</td>
+                <td>Активен</td>
+                <td>Нет примечаний</td>
+            </tr>
 
-                    <tr>
-                        <td colspan="4">Адрес</td>
-                        <td>г. Москва</td>
-                        <td>2025-09-19</td>
-                        <td>Отменен</td>
-                        <td>Не актуален</td> 
-                    </tr>
-                        
-                    <tr>
-                        <td colspan="4">Телефон</td>
-                        <td>+7 (800) 555-35-35</td>
-                        <td>2025-09-20</td>
-                        <td>Активен</td>         
-                        <td>Нет примечаний</td>
-                        </tr>
-                    </table>
-                </div>
+            <tr>
+                <td colspan="4">Юр. Лицо</td>
+                <td>"ООО «Альфа Строй»"</td>
+                <td>2025-09-20</td>
+                <td>В ожидании</td>
+                <td>Важный клиент</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Юр. Лицо</td>
+                <td>Петров Петр</td>
+                <td>2025-09-18</td>
+                <td>В процессе</td>
+                <td>Требуется уточнение</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Адрес</td>
+                <td>г. Москва</td>
+                <td>2025-09-19</td>
+                <td>Отменен</td>
+                <td>Не актуален</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Телефон</td>
+                <td>+7 (800) 555-35-35</td>
+                <td>2025-09-20</td>
+                <td>Активен</td>
+                <td>Нет примечаний</td>
+            </tr>
+        </table>
+    </div>
 
 
-    
-<p id="form_main_title">
-<p class="form_main_title"> Форма </p>
-<div class="form_main_div">
-<h4> Форма для заполнения: </h4>
-<form method="POST" action="/" id="formList">
-    <label> ФИО </label>
-    <br>
-    <input type="text" name="fieldNameSurname" placeholder="Иванов Иван Иванович" required>
-    <br>
-    <label> Номер телефона </label>
-    <br>
-    <input type="tel" name="fieldPhoneNumber" placeholder="89992223432" required>
-    <br>
-    <label> Ваш Email адрес </label>
-    <br>
-    <input type="email" name="fieldEmail" placeholder="hfhf@gmial.com" required>
-    <br>
-    <label> Дата рождения </label>
-    <br>
-    <input type="date" name="fieldDateBirthday" required>
-    <br>
-    <label> Ваш пол: </label>
-    <label> <input type="radio" name="radio-sex" checked="checked" value="Мужской"> Мужской </label>
-    <label> <input type="radio" name="radio-sex" value="Женский"> Женский </label>
-    <br>
-    <label> Любимый язык программирования: </label>
-    <br>
-    <select multiple="multiple" name="fieldFavoriteProgrammingLanguage" required>
-        <option value="Java">Java</option>
-        <option value="PHP">PHP</option>
-        <option value="C++">C++</option>
-        <option value="Python">Python</option>
-        <option value="Ruby">Ruby</option>
-        <option value="C#">C#</option>
-        <option value="C">C</option>
-        <option value="1C">1C</option>
-        <option value="JavaScript">JavaScript</option>
-        <option value="Pascal">Pascal</option>
-        <option value="Haskel">Haskel</option>
-        <option value="Prolog">Prolog</option>
-        <option value="Scala">Scala</option>
-        <option value="Clojure">Clojure</option>
-    </select>
-    <br>
-    <label> Ваша биография </label>
-    <br>
-    <textarea name="fieldBiography" required></textarea>
-    <br>
-    <input type="checkbox" name="checkboxAgree" required> С контрактом ознакомлен(а)
-    <br>
-    <input type="submit" value="Отправить">
-</form>
-</div>
+
+    <p id="form_main_title">
+    <p  class="form_main_title" style="color: white"> Форма </p>
+    <div class="form_main_div">
+        <form method="POST" action="/" id="formList">
+            <label style="color: white">ФИО</label>
+            <br>
+            <input type="text" name="fieldNameSurname" placeholder="Иванов Иван Иванович" required>
+            <br>
+            <label style="color: white"> Номер телефона </label>
+            <br>
+            <input type="tel" name="fieldPhoneNumber" placeholder="89992223432" required>
+            <br>
+            <label style="color: white"> Ваш Email адрес </label>
+            <br>
+            <input type="email" name="fieldEmail" placeholder="hfhf@gmial.com" required>
+            <br>
+            <label style="color: white"> Дата рождения </label>
+            <br>
+            <input type="date" name="fieldDateBirthday" required>
+            <br>
+            <label style="color: white"> Ваш пол: </label>
+            <label style="color: white"> <input type="radio" name="radio-sex" checked="checked" value="Мужской"> Мужской </label>
+            <label style="color: white"> <input type="radio" name="radio-sex" value="Женский"> Женский </label>
+            <br>
+            <label style="color: white"> Любимый язык программирования: </label>
+            <br>
+            <select multiple="multiple" name="fieldFavoriteProgrammingLanguage" required>
+                <option value="Java">Java</option>
+                <option value="PHP">PHP</option>
+                <option value="C++">C++</option>
+                <option value="Python">Python</option>
+                <option value="Ruby">Ruby</option>
+                <option value="C#">C#</option>
+                <option value="C">C</option>
+                <option value="1C">1C</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Pascal">Pascal</option>
+                <option value="Haskel">Haskel</option>
+                <option value="Prolog">Prolog</option>
+                <option value="Scala">Scala</option>
+                <option value="Clojure">Clojure</option>
+            </select>
+            <br>
+            <label style="color: white"> Ваша биография </label>
+            <br>
+            <textarea name="fieldBiography" required></textarea>
+            <br>
+            <input type="checkbox" name="checkboxAgree" style="color: white" required> С контрактом ознакомлен(а)
+            <br>
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
 </main>
-     <footer><span class="footer_text">(c) Халов Павел</span></footer>
+<footer><span class="footer_text">(c) Халов Павел</span></footer>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
