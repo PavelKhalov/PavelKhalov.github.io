@@ -3,24 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт Халова Павла</title>
     <link rel="stylesheet" href="style.css">
-    <title>Работа Халова Павла</title>
 </head>
-
 <body>
 <header>
-    <div class="header_content">
-        <a href="#"><img src="logo.png" alt="logo.png" class="logo"></a>
-        <nav class="nav_header"><a href="#">Главная</a><a href="#link_list_title">Ссылки</a><a href="#table_main_title">Таблица</a><a href="#form_main_title">Форма</a></nav>
-        <h1 class="text_header_logo"><a href="#">Сайт Халова Павла</a></h1>
+    <div>
+    <a href="#"><img src="logo.png" alt="logo.png" class="logo"></a>
     </div>
+    <h1>Сайт Халова Павла</h1>
 </header>
 
-<main>
-    <p id="link_list_title"></p>
-    <p class="link_list_title">Ссылки</p>
-    <div class="link_list_div">
-        <ul>
+<nav>
+    <ul>
+        <li><a href="#table">Таблица</a></li>
+        <li><a href="#links">Список гиперссылок</a></li>
+        <li><a href="#form">Форма</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h2>Таблица</h2>
+    <table id="table">
+        <thead>
+        <tr>
+            <th>Тип</th>
+            <th>Данные</th>
+            <th>Дата</th>
+            <th>Статус</th>
+            <th>Примечания</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Физ. Лицо</td>
+            <td>Пётр Петров</td>
+            <td>25-03-22</td>
+            <td>Активен</td>
+            <td>Нет примечаний</td>
+        </tr>
+        <tr>
+            <td>ИП</td>
+            <td>Иван Александрович</td>
+            <td>25-09-21</td>
+            <td>Активен</td>
+            <td>Не важный клиент</td>
+        </tr>
+            <td>Юр. Лицо</td>
+            <td>ООО "Альфа Строй"</td>
+            <td>25-09-20</td>
+            <td>В ожидании</td>
+            <td>Важный клиент</td>
+        <tr>
+        </tr>
+        <tr>
+            <td>Адрес</td>
+            <td>г.Астрахань</td>
+            <td>25-02-10</td>
+            <td>Отменён</td>
+            <td>Нет</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Список гиперссылок</h2>
+    <ul class="links-list" id="links">
             <li>
                 <a href="http://kubsu.ru/index.php"> КубГУ</a>
             </li>
@@ -97,8 +144,6 @@
             <li>
                 <a href="http://kubsu.ru" rel="noindex"> Запрещённая ссылка для индексации </a>
             </li>
-            <li>
-
                 <ol>
                     <li>
                         <a href="http://kubsu.ru" tite="Вот"> Сайт КубГУ</a>
@@ -110,103 +155,35 @@
                         <a href="http://kubsu.ru" tite="КубГУ"> Сайт КубГУ</a>
                     </li>
                 </ol>
-            </li>
-
             <li>
                 <a href="ftp://username:password@ftp.example.com/path/to/file.txt">Скачать файл</a>
             </li>
-        </ul>
-    </div>
-    <p id="table_main_title"></p>
-    <p class="table_main_title" style="color: white">Таблица</p>
-    <div class="table_main_div">
-        <table>
-            <tr>
-                <th colspan="4">Тип</th>
-                <th>Данные</th>
-                <th>Дата</th>
-                <th>Статус</th>
-                <th>Примечания</th>
-            </tr>
+    </ul>
 
-            <tr>
-                <td colspan="4">Физ. Лицо</td>
-                <td>Мельникова Ксения</td>
-                <td>2025-09-20</td>
-                <td>Завершен</td>
-                <td>Нет примечаний</td>
-            </tr>
+    <h2>ФОРМА</h2>
+    <form>
+        <div class="form-group" id="form">
+            <label for="name">ФИО</label>
+            <input type="text" id="name" name="name"  required>
+        </div>
 
-            <tr>
-                <td colspan="4" >Физ. Лицо</td>
-                <td>Иванов Иван</td>
-                <td>2025-09-20</td>
-                <td>Активен</td>
-                <td>Нет примечаний</td>
-            </tr>
+        <div class="form-group">
+            <label>Телефон</label>
+            <input type="tel" id="tel" name="tel"  required>
+        </div>
 
-            <tr>
-                <td colspan="4">Юр. Лицо</td>
-                <td>"ООО «Альфа Строй»"</td>
-                <td>2025-09-20</td>
-                <td>В ожидании</td>
-                <td>Важный клиент</td>
-            </tr>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"  required>
+        </div>
 
-            <tr>
-                <td colspan="4">Юр. Лицо</td>
-                <td>Петров Петр</td>
-                <td>2025-09-18</td>
-                <td>В процессе</td>
-                <td>Требуется уточнение</td>
-            </tr>
+        <div class="form-group">
+            <label>День роджения</label>
+                <input type="date" name="DOB" required>
+        </div>
 
-            <tr>
-                <td colspan="4">Адрес</td>
-                <td>г. Москва</td>
-                <td>2025-09-19</td>
-                <td>Отменен</td>
-                <td>Не актуален</td>
-            </tr>
-
-            <tr>
-                <td colspan="4">Телефон</td>
-                <td>+7 (800) 555-35-35</td>
-                <td>2025-09-20</td>
-                <td>Активен</td>
-                <td>Нет примечаний</td>
-            </tr>
-        </table>
-    </div>
-
-
-
-    <p id="form_main_title">
-    <p  class="form_main_title" style="color: white"> Форма </p>
-    <div class="form_main_div">
-        <form method="POST" action="/" id="formList">
-            <label style="color: white">ФИО</label>
-            <br>
-            <input type="text" name="fieldNameSurname" placeholder="Иванов Иван Иванович" required>
-            <br>
-            <label style="color: white"> Номер телефона </label>
-            <br>
-            <input type="tel" name="fieldPhoneNumber" placeholder="89992223432" required>
-            <br>
-            <label style="color: white"> Ваш Email адрес </label>
-            <br>
-            <input type="email" name="fieldEmail" placeholder="hfhf@gmial.com" required>
-            <br>
-            <label style="color: white"> Дата рождения </label>
-            <br>
-            <input type="date" name="fieldDateBirthday" required>
-            <br>
-            <label style="color: white"> Ваш пол: </label>
-            <label style="color: white"> <input type="radio" name="radio-sex" checked="checked" value="Мужской"> Мужской </label>
-            <label style="color: white"> <input type="radio" name="radio-sex" value="Женский"> Женский </label>
-            <br>
-            <label style="color: white"> Любимый язык программирования: </label>
-            <br>
+        <div class="form-group">
+            <label>Ваш любимый язык программирования</label>
             <select multiple="multiple" name="fieldFavoriteProgrammingLanguage" required>
                 <option value="Java">Java</option>
                 <option value="PHP">PHP</option>
@@ -223,21 +200,22 @@
                 <option value="Scala">Scala</option>
                 <option value="Clojure">Clojure</option>
             </select>
-            <br>
-            <label style="color: white"> Ваша биография </label>
-            <br>
-            <textarea name="fieldBiography" required></textarea>
-            <br>
-            <span style="color: white">
-            <input type="checkbox" name="checkboxAgree" required>С контрактом ознакомлен(а)
-            </span>
-            <br>
-            <input type="submit" value="Отправить">
-        </form>
-    </div>
-</main>
-<footer><span class="footer_text">(c) Халов Павел</span></footer>
+        </div>
+
+        <div class="form-group">
+            <label>Биография:</label>
+            <textarea name="biography" required></textarea>
+        </div>
+
+        <label for="myself" class="checkbox-label"/>С контрактом ознакомлен(a)
+        <input type="checkbox" name="myself" id="myself" required>
+        <br>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+
+<footer>
+    <p>(c) Халов Павел</p>
+</footer>
 </body>
-
 </html>
-
