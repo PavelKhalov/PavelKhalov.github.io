@@ -1,9 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -11,28 +5,18 @@ body {
     font-size: 14px;
 }
 
-/* Mobile First */
-
-/* Header */
 header {
     background: #333;
     color: white;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 10px;
-    text-align: center;
 }
 
-.logo {
-    width: 40px;
-    height: 40px;
+#logo {
+    width: 60px;
+    height: 60px;
     background: #4CAF50;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: bold;
     font-size: 12px;
 }
@@ -41,102 +25,67 @@ header h1 {
     font-size: 1.5rem;
 }
 
-/* Navigation */
 nav {
     background: #444;
     padding: 0.5rem;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
     gap: 5px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px;
     border-radius: 3px;
     transition: background 0.3s;
-    display: block;
-    text-align: center;
 }
 
 nav a:hover {
     background: #555;
 }
 
-/* Main content */
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
-    background: white;
-    min-height: 400px;
-}
 
-/* Table */
 table {
-    width: 100%;
+    width: 50%;
     border-collapse: collapse;
-    margin: 1rem 0;
-    font-size: 12px;
+    font-size: 8px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+
+tr:nth-child(odd){
+    background-color: rgb(219, 189, 16);
+} 
+
+tr:nth-child(even){
+    background-color: rgb(40, 221, 16);
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
-}
 
-th {
-    background: #f2f2f2;
-}
+#f15{
+    width: 300px;
+} 
 
-/* Links list */
-.links-list {
-    margin: 1rem 0;
-    padding-left: 1rem;
-}
+#links-list {
+    list-style-position: inside;
+} 
 
-.links-list li {
-    margin-bottom: 0.5rem;
-}
 
-.links-list a {
+#links-list a {
     color: #0066cc;
     text-decoration: none;
     font-size: 14px;
 }
 
-.links-list a:hover {
+#links-list a:hover {
     text-decoration: underline;
 }
 
-/* Form */
-.form-group {
-    margin: 1rem 0;
-}
-
 label {
-    display: block;
-    margin-bottom: 5px;
     font-weight: bold;
     font-size: 14px;
 }
 
-input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-}
 
 button {
     background: #4CAF50;
@@ -153,30 +102,23 @@ button:hover {
     background: #45a049;
 }
 
-/* Footer */
 footer {
     background: #333;
     color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
     font-size: 12px;
 }
 
-/* для компов */
-@media (min-width: 768px) {
+@media screen and (min-device-width: 768px) {
+
+    #f15{
+        width: 350px;
+    }
+
     body {
         font-size: 16px;
     }
 
-    header {
-        flex-direction: row;
-        gap: 20px;
-        text-align: left;
-        padding: 1rem 2rem;
-    }
-
-    .logo {
+    #logo {
         width: 50px;
         height: 50px;
         font-size: 14px;
@@ -186,38 +128,15 @@ footer {
         font-size: 2rem;
     }
 
-    nav {
-        padding: 1rem 2rem;
-    }
-
     nav ul {
-        flex-direction: row;
         gap: 20px;
-    }
-
-    nav a {
-        padding: 5px 15px;
-    }
-
-    .container {
-        max-width: 1200px;
-        padding: 2rem;
-        margin: 0 auto;
     }
 
     table {
         font-size: 14px;
     }
 
-    th, td {
-        padding: 12px;
-    }
-
-    .links-list {
-        padding-left: 2rem;
-    }
-
-    .links-list a {
+    #links-list a {
         font-size: 16px;
     }
 
@@ -226,26 +145,19 @@ footer {
     }
 
     input, textarea, select {
-        padding: 8px;
         font-size: 16px;
         max-width: 500px;
     }
 
-    button {
-        width: auto;
-        padding: 10px 20px;
-    }
-
     footer {
         font-size: 14px;
-        padding: 1.5rem;
     }
 }
 
-/* Для длинных мониторов */
-@media (min-width: 1024px) {
-    .container {
-        padding: 3rem;
+@media screen and (min-device-width: 1024px) {
+
+    #f15{
+        width: auto;
     }
 
     nav ul {
@@ -253,12 +165,7 @@ footer {
     }
 
     nav a {
-        padding: 8px 20px;
         font-size: 18px;
-    }
-
-    header {
-        padding: 1.5rem 3rem;
     }
 
     table {
@@ -266,21 +173,3 @@ footer {
     }
 }
 
-/* Для мелких мобилок */
-@media (max-width: 360px) {
-    header h1 {
-        font-size: 1.2rem;
-    }
-
-    .container {
-        padding: 0.5rem;
-    }
-
-    table {
-        font-size: 10px;
-    }
-
-    th, td {
-        padding: 4px;
-    }
-}
