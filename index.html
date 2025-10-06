@@ -3,219 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Сайт Халова Павла</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <div>
-    <a href="#"><img src="logo.png" alt="logo.png" class="logo"></a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex">
+                <a href="#"><img src="logo.png" alt="logo.png" id="logo" class="float-left"></a>
+                <h1 class="d-flex align-items-center ml-3">Сайт Халова Павла</h1>
+            </div>
+        </div>
     </div>
-    <h1>Сайт Халова Павла</h1>
 </header>
 
 <nav>
-    <ul>
-        <li><a href="#table">Таблица</a></li>
-        <li><a href="#links">Список гиперссылок</a></li>
-        <li><a href="#form">Форма</a></li>
+    <ul class="nav d-flex flex-column text-center flex-md-row justify-content-md-center">
+        <li class="nav-item"><a href="#table" class="nav-link">Таблица</a></li>
+        <li class="nav-item"><a href="#links" class="nav-link">Список гиперссылок</a></li>
+        <li class="nav-item"><a href="#form" class="nav-link">Форма</a></li>
     </ul>
 </nav>
 
-<div class="container">
-    <h2>Таблица</h2>
-    <table id="table">
-        <thead>
-        <tr>
-            <th>Тип</th>
-            <th>Данные</th>
-            <th>Дата</th>
-            <th>Статус</th>
-            <th>Примечания</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Физ. Лицо</td>
-            <td>Пётр Петров</td>
-            <td>25-03-22</td>
-            <td>Активен</td>
-            <td>Нет примечаний</td>
-        </tr>
-        <tr>
-            <td>ИП</td>
-            <td>Иван Александрович</td>
-            <td>25-09-21</td>
-            <td>Активен</td>
-            <td>Не важный клиент</td>
-        </tr>
-            <td>Юр. Лицо</td>
-            <td>ООО "Альфа Строй"</td>
-            <td>25-09-20</td>
-            <td>В ожидании</td>
-            <td>Важный клиент</td>
-        <tr>
-        </tr>
-        <tr>
-            <td>Адрес</td>
-            <td>г.Астрахань</td>
-            <td>25-02-10</td>
-            <td>Отменён</td>
-            <td>Нет</td>
-        </tr>
-        </tbody>
-    </table>
 
-    <h2>Список гиперссылок</h2>
-    <ul class="links-list" id="links">
-            <li>
-                <a href="http://kubsu.ru/index.php"> КубГУ</a>
-            </li>
+<div class="container-fluid">
+    <div class="row justify-content-center">
 
-            <li>
-                <a href="https://kubsu.ru/index.php"> Официальный сайт КубГУ</a>
-            </li>
+        <div class="col-md-9 order-2 order-md-1 mt-3 mb-3 pt-3 text-center" id="links">
+            <h2>Список гиперссылок</h2>
+            <ul id="links-list">
+                <li>
+                    <a href="http://kubsu.ru/index.php"> КубГУ</a>
+                </li>
 
-            <li>
-                <a href="http://kubsu.ru/">
-                    <img alt="Весёлая картинка" src="funnyPic.jpg" id="#funnypicture"></a>
-            </li>
+                <li>
+                    <a href="https://kubsu.ru/index.php"> Официальный сайт КубГУ</a>
+                </li>
 
-            <li>
-                <a href="Catalog/second-page.html"> Сокращ. ссылка на внутр. страницу сайта</a>
-            </li>
+                <li>
+                    <a href="http://kubsu.ru/">
+                        <img alt="Весёлая картинка" src="funnyPic.jpg" id="#funnypicture" width="300px"></a>
+                </li>
 
-            <li>
-                <a href="./MainPage.html"> Сокращ. ссылка на главную страницу сайта </a>
-            </li>
+                <li>
+                    <a href="Catalog/second-page.html"> Сокращ. ссылка на внутр. страницу сайта</a>
+                </li>
 
-            <li>
-                <a href="#formList"> Ссылка на фрагмент текущей страницы (на форму для заполнения) </a>
-            </li>
+                <li>
+                    <a href="./MainPage.html"> Сокращ. ссылка на главную страницу сайта </a>
+                </li>
 
-            <li>
-                <a href="https://www.kubsu.ru/ru/taxonomy/term/49?page=1&perpage=10&category=post"> Ссылка с тремя параметрами </a>
-            </li>
+                <li>
+                    <a href="#formList"> Ссылка на фрагмент текущей страницы (на форму для заполнения) </a>
+                </li>
 
-            <li>
-                <a href="https://www.kubsu.ru/ru/taxonomy/term/49?id=#zone-footer-wrapper"> Ссылка с параметром: id </a>
-            </li>
+                <li>
+                    <a href="https://www.kubsu.ru/ru/taxonomy/term/49?page=1&perpage=10&category=post"> Ссылка с тремя параметрами </a>
+                </li>
 
-            <li>
-                <a href="./MainPage.html"> Относительная сслыка на главную страницу в главном пакете</a>
-            </li>
+                <li>
+                    <a href="https://www.kubsu.ru/ru/taxonomy/term/49?id=#zone-footer-wrapper"> Ссылка с параметром: id </a>
+                </li>
 
-            <li>
-                <a href="./Catalog/second-page.html"> Относительная ссылка на внутреннюю страницу в каталоге</a>
-            </li>
+                <li>
+                    <a href="./MainPage.html"> Относительная сслыка на главную страницу в главном пакете</a>
+                </li>
 
-            <li>
-                <a href="./Catalog/Catalog2/third-page.html"> Относительная ссылка на внутреннюю страницу в каталоге2, где относительная ссылка на страницу в каталоге </a>
-            </li>
+                <li>
+                    <a href="./Catalog/second-page.html"> Относительная ссылка на внутреннюю страницу в каталоге</a>
+                </li>
 
-            <li>
-                <p>
-                    Пример использования <a href="http://kubsu.ru/index.php"> ссылки</a> посреди текста
-                </p>
-            </li>
+                <li>
+                    <a href="./Catalog/Catalog2/third-page.html"> Относительная ссылка на внутреннюю страницу в каталоге2, где относительная ссылка на страницу в каталоге </a>
+                </li>
 
-            <li>
-                <a href="https://swiftbook.org/courses/415/show_promo/#"> Ссылка на фрагмет сайта с it курсами swiftbook</a>
-            </li>
+                <li>
+                    <p>
+                        Пример использования <a href="http://kubsu.ru/index.php"> ссылки</a> посреди текста
+                    </p>
+                </li>
 
-            <map name="kartinka">
-                <area shape="recet" coords="70,70,700,380" href="https://kubsu.ru" alt="Сайт кубгу, прямоугольник">
-                <area shape="circle" coords="360, 750, 250" href="https://kubsu.ru/index.php" alt="Сайт кубгу, круг">
-                <img src="kartinka.jpg"  usemap="#kartinka" alt="Кратинка">
-            </map>
+                <li>
+                    <a href="https://swiftbook.org/courses/415/show_promo/#"> Ссылка на фрагмет сайта с it курсами swiftbook</a>
+                </li>
 
-            <li>
-                <a href=""> Пустая ссылка</a>
-            </li>
+                <map name="kartinka">
+                    <area shape="recet" coords="70,70,700,380" href="https://kubsu.ru" alt="Сайт кубгу, прямоугольник">
+                    <area shape="circle" coords="360, 750, 250" href="https://kubsu.ru/index.php" alt="Сайт кубгу, круг">
+                    <img src="kartinka.jpg"  usemap="#kartinka" alt="Кратинка" id="f15">
+                </map>
 
-            <li>
-                <a> Сыллка без href</a>
-            </li>
+                <li>
+                    <a href=""> Пустая ссылка</a>
+                </li>
 
-            <li>
-                <a href="http://kubsu.ru/" rel="nofollow"> Запрещённая для поисковиков ссылка </a>
-            </li>
+                <li>
+                    <a> Сыллка без href</a>
+                </li>
 
-            <li>
-                <a href="http://kubsu.ru" rel="noindex"> Запрещённая ссылка для индексации </a>
-            </li>
-                <ol>
-                    <li>
-                        <a href="http://kubsu.ru" tite="Вот"> Сайт КубГУ</a>
-                    </li>
-                    <li>
-                        <a href="http://kubsu.ru" tite="Сайт"> Сайт КубГУ</a>
-                    </li>
-                    <li>
-                        <a href="http://kubsu.ru" tite="КубГУ"> Сайт КубГУ</a>
-                    </li>
-                </ol>
-            <li>
-                <a href="ftp://username:password@ftp.example.com/path/to/file.txt">Скачать файл</a>
-            </li>
-    </ul>
+                <li>
+                    <a href="http://kubsu.ru/" rel="nofollow"> Запрещённая для поисковиков ссылка </a>
+                </li>
 
-    <h2>ФОРМА</h2>
-    <form>
-        <div class="form-group" id="form">
-            <label for="name">ФИО</label>
-            <input type="text" id="name" name="name"  required>
-        </div>
+                <li>
+                    <a href="http://kubsu.ru" rel="noindex"> Запрещённая ссылка для индексации </a>
+                </li>
+                    <ol>
+                        <li>
+                            <a href="http://kubsu.ru" tite="Вот"> Сайт КубГУ</a>
+                        </li>
+                        <li>
+                            <a href="http://kubsu.ru" tite="Сайт"> Сайт КубГУ</a>
+                        </li>
+                        <li>
+                            <a href="http://kubsu.ru" tite="КубГУ"> Сайт КубГУ</a>
+                        </li>
+                    </ol>
+                <li>
+                    <a href="ftp://username:password@ftp.example.com/path/to/file.txt">Скачать файл</a>
+                </li>
+        </ul>
+    </div>
 
-        <div class="form-group">
-            <label>Телефон</label>
-            <input type="tel" id="tel" name="tel"  required>
-        </div>
 
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email"  required>
-        </div>
 
-        <div class="form-group">
-            <label>День роджения</label>
-                <input type="date" name="DOB" required>
-        </div>
 
-        <div class="form-group">
-            <label>Ваш любимый язык программирования</label>
-            <select multiple="multiple" name="fieldFavoriteProgrammingLanguage" required>
-                <option value="Java">Java</option>
-                <option value="PHP">PHP</option>
-                <option value="C++">C++</option>
-                <option value="Python">Python</option>
-                <option value="Ruby">Ruby</option>
-                <option value="C#">C#</option>
-                <option value="C">C</option>
-                <option value="1C">1C</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="Pascal">Pascal</option>
-                <option value="Haskel">Haskel</option>
-                <option value="Prolog">Prolog</option>
-                <option value="Scala">Scala</option>
-                <option value="Clojure">Clojure</option>
-            </select>
-        </div>
 
-        <div class="form-group">
-            <label>Биография:</label>
-            <textarea name="biography" required></textarea>
-        </div>
 
-        <label for="myself" class="checkbox-label"/>С контрактом ознакомлен(a)
-        <input type="checkbox" name="myself" id="myself" required>
-        <br>
-        <button type="submit">Отправить</button>
-    </form>
+    <div class="col-md-9 order-1 order-md-2 mb-3 pb-3" id="table">
+        <h2 class="text-center">Таблица</h2>
+        <table id="table" class="table table-bordered table-dark mx-auto">
+            <tr>
+                <th>Тип</th>
+                <th>Данные</th>
+                <th>Дата</th>
+                <th>Статус</th>
+                <th>Примечания</th>
+            </tr>
+            <tr>
+                <td>Физ. Лицо</td>
+                <td>Пётр Петров</td>
+                <td>25-03-22</td>
+                <td>Активен</td>
+                <td>Нет примечаний</td>
+            </tr>
+
+            <tr>
+                <td>ИП</td>
+                <td>Иван Александрович</td>
+                <td>25-09-21</td>
+                <td>Активен</td>
+                <td>Не важный клиент</td>
+            </tr>
+            <tr>
+                <td>Юр. Лицо</td>
+                <td>ООО "Альфа Строй"</td>
+                <td>25-09-20</td>
+                <td>В ожидании</td>
+                <td>Важный клиент</td>
+            </tr>
+
+            <tr>
+                <td>Адрес</td>
+                <td>г.Астрахань</td>
+                <td>25-02-10</td>
+                <td>Отменён</td>
+                <td>Нет</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    
+
+
+
+    
+
+    <div class="col-md-9 order-3 order-md-3 mb-3 pt-3" id="form">
+    <form class="d-flex flex-column text-center">
+            <h2>ФОРМА</h2>
+            <div id="form-group">
+                <label for="name">ФИО</label><br>
+                <input type="text" id="name" name="name"  required>
+            </div>
+
+            <div id="form-group">
+                <label>Телефон</label><br>
+                <input type="tel" id="tel" name="tel"  required>
+            </div>
+
+            <div id="form-group">
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email"  required>
+            </div>
+
+            <div id="form-group">
+                <label>День роджения</label><br>
+                    <input type="date" name="DOB" required>
+                </label>
+            </div>
+
+            <div id="form-group">
+                <label>Ваш любимый язык программирования</label><br>
+                <select multiple="multiple" name="fieldFavoriteProgrammingLanguage" required>
+                    <option value="Java">Java</option>
+                    <option value="PHP">PHP</option>
+                    <option value="C++">C++</option>
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="C#">C#</option>
+                    <option value="C">C</option>
+                    <option value="1C">1C</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Pascal">Pascal</option>
+                    <option value="Haskel">Haskel</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala">Scala</option>
+                    <option value="Clojure">Clojure</option>
+                </select>
+            </div>
+
+            <div id="form-group">
+                <label>Биография:</label><br>
+                <textarea name="biography" required></textarea>
+            </div>
+
+            <div id="form-group">
+                <span>С контрактом ознакомлен(a)</span>
+                <input type="checkbox" checked="checked" name="check-1" required>
+            </div>
+            
+            <label>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary col-auto">Отправить</button>
+            </div>
+
+        </form>
+    </div>
+
+    </div>
 </div>
 
-<footer>
-    <p>(c) Халов Павел</p>
+
+<footer class="bg-dark text-white p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <span id="footer">(c) Халов Павел</span>
+            </div>
+        </div>
+    </div>
 </footer>
 </body>
 </html>
