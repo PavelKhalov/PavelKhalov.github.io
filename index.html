@@ -1,0 +1,72 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div>
+        <label>Введите количество товаров</label>
+        <input type="number" class="input-form" id="quantity" value="1" main="1">
+        <br><br>
+        <label>Выберете товар</label>
+        <select class="custom-select" id="prod">
+            <option value="1">Товар 1 - 100р</option>
+            <option value="2">Товар 2 - 200р</option>
+            <option value="3">Товар 3 - 300р</option>
+            <option value="4">Товар 4 - 400р</option>
+            <option value="5">Товар 5 - 500р</option>
+        </select>
+        <br><br>
+        <label>Сделать рассчёт стоимости всех товаров</label>
+        <button id="priceBtn">Рассчитать</button>
+        <br><br>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const quantityInput = document.getElementById('quantity');
+        const prodSelect = document.getElementById('prod');
+        const priceButton = document.getElementById('priceBtn');
+        const resDiv = document.getElementById('result');
+
+        function onClick() {
+            const quantity = quantityInput.value;
+            const listProd = prodSelect.value;
+            let price = 0;
+
+            switch (listProd) {
+                case '1':
+                    price = 100;
+                    break;
+                case '2':
+                    price = 200;
+                    break;
+                case '3':
+                    price = 300;
+                    break;
+                case '4':
+                    price = 400
+                    break;
+                case '5':
+                    price = 500;
+                    break;
+            }
+
+            if (quantity <= 0) resDiv.textContent = 'Error: !>0';
+            else {
+                const rez = quantity * price;
+                resDiv.textContent = "Стоимость заказа = " + rez;
+                console.log("Цена: " + price + "\n" + "Количество - " + prodSelect.value + "\n" +
+                    "Стоимость = " + rez);
+            }
+        }
+        window.addEventListener('DOMContentLoaded', function (even){
+            console.log("DOM fully loaded and parsed");
+            priceButton.addEventListener('click', onClick);
+        })
+
+    </script>
+</body>
+</html>
