@@ -3,134 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .hidden{
+          display:none;
+      }
+    </style>
 </head>
 
 <body>
-    <div>
-        <label>Введите количество товаров</label>
-        <input type="number" class="input-form" id="quantity" value="1" min="1">
-        <br><br>
-        <label>Выберете товар</label>
-        <select class="custom-select" id="prod">
-            <option value="1">Товар 1 - 100р</option>
-            <option value="2">Товар 2 - 200р</option>
-            <option value="3">Товар 3 - 300р</option>
-        </select>
-        <br><br>
-        <label>Сделать рассчёт стоимости всех товаров</label>
-        <button id="priceBtn">Рассчитать</button>
-        <br><br>
-        <div id="result"></div>
+
+<div class="container">
+    <label for="quantity">Введите количество товара:</label>
+    <input type="number" class="input-form" id="quantity" value="1" min="1">
+    <br>
+    <br>
+    <label>Выберите тип услуги:</label>
+    <div id="productTypes">
+        <label><input type="radio" name="productType" value="type1" checked>Тип 1</label>
+        <label><input type="radio" name="productType" value="type2">Тип 2</label>
+        <label><input type="radio" name="productType" value="type3">Тип 3</label>
     </div>
 
-    <form>
-        <select name="prodType" class="prodType">
-            <option value="1">Товар 1</option>
-            <option value="2">Товар 2</option>
-            <option value="3">Товар 3</option>
+    <div id="optionsContainer" class="options hidden">
+        <label for="productOptions">Выберите опцию:</label>
+        <select class="custom-select" id="productOptions">
+            <option value="option1">Опция 1 (+50 руб.)</option>
+            <option value="option2">Опция 2 (+100 руб.)</option>
         </select>
+    </div>
+    <br>
+    <div id="propertiesContainer" class="properties hidden">
+        <label><input type="checkbox" id="productProperty" value="property1">Свойство (+75 руб.)</label>
+    </div>
+    <br>
+    <div id="result"></div>
+</div>
 
-        <div id="radios" class="radios">
-            <label><input type="radio" name="prodOptions" value="option1">Опция 1</label>
-            <label><input type="radio" name="prodOptions" value="option2">Опция 2</label>
-            <label><input type="radio" name="prodOptions" value="option3">Опция 3</label>
-        </div>
-        <div id="checkboxes" class="checkboxes" style="display: none;">
-            <label><input type="checkbox" name="r1">Свойство 1</label>
-            <label><input type="checkbox" name="r2">Свойство 2</label>
-        </div>
-    </form>
+<script>
+    const quantityInput = document.getElementById("quantity");
+    const productTypeRadios = document.querySelectorAll('input[name="productType"]');
+    const optionsContainer = document.getElementById("optionsContainer");
+    const productOptionsSelect = document.getElementById("productOptions");
+    const propertiesContainer = document.getElementById("propertiesContainer");
+    const productPropertyCheckbox = document.getElementById("productProperty");
+    const resultDiv = document.getElementById("result");
 
-    <script>
-        const config = {
-            prodTypes: [100, 200, 150],
-            prodOptions: {
-                option2: 10,
-                option3: 5
-            },
-            prodProperties: {
-                prod1: 1,
-                prod2: 2
+    let currentProductType = "type1";
+
+    function updateOptionsAndProperties() {
+        optionsContainer.classList.add("hidden");
+        propertiesContainer.classList.add("hidden");
+
+        if (currentProductType === "type2") {
+            optionsContainer.classList.remove("hidden");
+        } else if (currentProductType === "type3") {
+            propertiesContainer.classList.remove("hidden");
+        }
+    }
+
+    productTypeRadios.forEach(radio => {
+        radio.addEventListener("change", function () {
+            currentProductType = this.value;
+            updateOptionsAndProperties();
+            calculatePrice();
+        });
+    });
+
+    function calculatePrice() {
+        const quantity = parseInt(quantityInput.value);
+
+        if (isNaN(quantity) || quantity <= 0) {
+            resultDiv.textContent = "Ошибка: Введите корректное количество.";
+            return;
+        }
+
+        let basePrice = 0;
+
+        if (currentProductType === "type1") {
+            basePrice = 100;
+        } else if (currentProductType === "type2") {
+            basePrice = 200;
+        } else if (currentProductType === "type3"){
+            basePrice = 300;
+        }
+
+        let additionalCost = 0;
+
+        if (currentProductType === "type2" && !optionsContainer.classList.contains("hidden")) {
+            const selectedOption = productOptionsSelect.value;
+            if (selectedOption === "option1") {
+                additionalCost += 50;
+            } else if (selectedOption === "option2") {
+                additionalCost += 100;
             }
-        };
-
-        const quantityInput = document.getElementById('quantity');
-        const prodSelect = document.getElementById('prod');
-        const priceButton = document.getElementById('priceBtn');
-        const resDiv = document.getElementById('result');
-
-        function onClick() {
-            const quantity = parseInt(quantityInput.value);
-            const listProd = prodSelect.value;
-            let price = 0;
-
-            switch (listProd) {
-                case '1':
-                    price = 100;
-                    break;
-                case '2':
-                    price = 200;
-                    break;
-                case '3':
-                    price = 300;
-                    break;
-            }
-
-            if (quantity <= 0 || isNaN(quantity)) {
-                resDiv.textContent = 'Error: количество должно быть больше 0';
-                resDiv.style.color = 'red';
-            } else {
-                const rez = quantity * price;
-                resDiv.textContent = "Стоимость заказа = " + rez + " руб.";
-                resDiv.style.color = 'black';
-                console.log("Цена: " + price + "\n" + "Количество: " + quantity + "\n" +
-                    "Стоимость = " + rez);
+        }
+        if (currentProductType === "type3" && !propertiesContainer.classList.contains("hidden")) {
+            if (productPropertyCheckbox.checked) {
+                additionalCost += 75;
             }
         }
 
-        window.addEventListener('DOMContentLoaded', function (event) {
-            console.log("DOM fully loaded and parsed");
-            priceButton.addEventListener('click', onClick);
-        });
-    </script>
+        const totalPrice = quantity * (basePrice + additionalCost);
+        resultDiv.textContent = `Стоимость заказа: ${totalPrice} руб. (${basePrice}шт)`;
+    }
 
-    <script>
-        window.addEventListener('DOMContentLoaded', function (event) {
-            const select = document.querySelector('select.prodType');
-            const radiosDiv = document.getElementById('radios');
-            const checkboxesDiv = document.getElementById('checkboxes');
+    quantityInput.addEventListener("input", calculatePrice);
+    productOptionsSelect.addEventListener("change", calculatePrice);
+    productPropertyCheckbox.addEventListener("change", calculatePrice);
 
-            function updateVisibility() {
-                if (select.value === '3') {
-                    // Для товара 3: скрыть радио, показать чекбоксы
-                    radiosDiv.style.display = 'none';
-                    checkboxesDiv.style.display = 'block';
-                } else {
-                    // Для товаров 1 и 2: показать радио, скрыть чекбоксы
-                    radiosDiv.style.display = 'block';
-                    checkboxesDiv.style.display = 'none';
-                }
-            }
-
-            updateVisibility();
-
-            select.addEventListener('change', updateVisibility);
-
-            const radioButtons = document.querySelectorAll('#radios input[type="radio"]');
-            radioButtons.forEach(function(radio) {
-                radio.addEventListener('change', function(event) {
-                    console.log('Выбрана радио кнопка:', event.target.value);
-                });
-            });
-
-            const checkboxes = document.querySelectorAll('#checkboxes input[type="checkbox"]');
-            checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function(event) {
-                    console.log('Чекбокс:', event.target.name, 'состояние:', event.target.checked);
-                });
-            });
-        });
-    </script>
-
+    window.addEventListener('DOMContentLoaded', function () {
+        updateOptionsAndProperties();
+        calculatePrice();
+    });
+</script>
 </body>
 </html>
